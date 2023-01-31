@@ -78,7 +78,7 @@ export default class Filter extends React.Component {
                     <div className="cond evol-fld"> 
                         <div className="cond-field">
                             <div className="evo-rdonly">
-                                <select onChange={this.fieldChange} value={this.state.field || ''} className="form-control">
+                                <select onChange={this.fieldChange} value={this.state.field || ''} className="form-control form-select">
                                     <option value=""  />
                                     {this.fields.map(f => <option value={f.id} key={f.id}>{f.label}</option>)}
                                 </select>
@@ -154,7 +154,7 @@ export default class Filter extends React.Component {
             opt(evoAPI.sIsNull, i18n.sIsNull),
             opt(evoAPI.sIsNotNull, i18n.sIsNotNull)
         )
-        return <select onChange={this.operatorChange} value={this.state.operator || ''} className="form-control">
+        return <select onChange={this.operatorChange} value={this.state.operator || ''} className="form-control form-select">
                 <option/>
                 {opts}
             </select>
